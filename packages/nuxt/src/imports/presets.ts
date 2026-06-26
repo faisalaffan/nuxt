@@ -42,6 +42,10 @@ const granularAppPresets: InlinePreset[] = [
     from: '#app/composables/once',
   },
   {
+    imports: ['useLocalStorage'],
+    from: '#app/composables/local-storage',
+  },
+  {
     imports: ['useState', 'clearNuxtState'],
     from: '#app/composables/state',
   },
