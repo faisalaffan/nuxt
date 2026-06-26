@@ -16,13 +16,12 @@ export { getLayerDirectories } from './layers.ts'
 export type { LayerDirectories } from './layers.ts'
 
 // Utils
-export { setGlobalHead } from './head.ts'
 export { addImports, addImportsDir, addImportsSources } from './imports.ts'
 export { updateRuntimeConfig, useRuntimeConfig } from './runtime-config.ts'
 export { addBuildPlugin, addVitePlugin, addRspackPlugin, addWebpackPlugin, extendViteConfig, extendRspackConfig, extendWebpackConfig } from './build.ts'
 export type { ExtendConfigOptions, ExtendViteConfigOptions, ExtendWebpackConfigOptions } from './build.ts'
 // eslint-disable-next-line @typescript-eslint/no-deprecated
-export { assertNuxtCompatibility, checkNuxtCompatibility, getNuxtVersion, hasNuxtCompatibility, isNuxtMajorVersion, normalizeSemanticVersion, isNuxt2, isNuxt3 } from './compatibility.ts'
+export { checkNuxtCompatibility, getNuxtVersion, hasNuxtCompatibility, isNuxtMajorVersion, normalizeSemanticVersion, isNuxt2, isNuxt3 } from './compatibility.ts'
 export type { NuxtMajorVersion } from './compatibility.ts'
 export { addComponent, addComponentExports, addComponentsDir } from './components.ts'
 export type { AddComponentOptions } from './components.ts'

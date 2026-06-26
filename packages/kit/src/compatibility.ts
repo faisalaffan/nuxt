@@ -74,17 +74,6 @@ export async function checkNuxtCompatibility (constraints: NuxtCompatibility, nu
 }
 
 /**
- * Check version constraints and throw a detailed error if has any, otherwise returns true
- */
-export async function assertNuxtCompatibility (constraints: NuxtCompatibility, nuxt: Nuxt = useNuxt()): Promise<true> {
-  const issues = await checkNuxtCompatibility(constraints, nuxt)
-  if (issues.length) {
-    throw new Error('Nuxt compatibility issues found:\n' + issues.toString())
-  }
-  return true
-}
-
-/**
  * Check version constraints and return true if passed, otherwise returns false
  */
 export async function hasNuxtCompatibility (constraints: NuxtCompatibility, nuxt: Nuxt = useNuxt()): Promise<boolean> {
