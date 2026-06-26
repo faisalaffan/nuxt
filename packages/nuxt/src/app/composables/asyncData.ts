@@ -892,7 +892,7 @@ function buildAsyncData<
           asyncData.error.value = undefined
           asyncData.status.value = 'success'
         })
-        .catch((error: any) => {
+        .catch((error: unknown) => {
           // If the promise was replaced or cleared (e.g. by clearNuxtData), do not update the asyncData
           if (nuxtApp._asyncDataPromises[key] !== promise) {
             return nuxtApp._asyncDataPromises[key]

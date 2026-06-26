@@ -496,8 +496,8 @@ async function renderStreamedResponse (ctx: {
   let vueApp
   try {
     vueApp = await createSSRApp(ssrContext)
-  } catch (error: any) {
-    if (ssrContext['~renderResponse'] && error?.message === 'skipping render') {
+  } catch (error: unknown) {
+    if (ssrContext['~renderResponse'] && (error as any)?.message === 'skipping render') {
       // Drop any preload `Link` header that targeted the streamed entry - the
       // redirect/response we are about to send does not need them.
       event.res.headers.delete('link')

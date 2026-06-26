@@ -178,7 +178,7 @@ const plugin: Plugin<{ router: Router }> = defineNuxtPlugin({
         await router.push(initialURL)
       }
       await router.isReady()
-    } catch (error: any) {
+    } catch (error: unknown) {
       // We'll catch 404s here
       await _showErrorUnlessCrawler(nuxtApp, error)
     }
@@ -363,7 +363,7 @@ const plugin: Plugin<{ router: Router }> = defineNuxtPlugin({
         }
         // reset scroll behavior to initial value
         router.options.scrollBehavior = routerOptions.scrollBehavior
-      } catch (error: any) {
+      } catch (error: unknown) {
         // We'll catch middleware errors or deliberate exceptions here
         await _showErrorUnlessCrawler(nuxtApp, error)
       }

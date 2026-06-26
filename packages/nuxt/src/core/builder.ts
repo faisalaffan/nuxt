@@ -278,7 +278,7 @@ async function resolveBuilder (nuxt: Nuxt): Promise<NuxtBuilder> {
     async bundle (nuxt) {
       try {
         await source.bundle(nuxt)
-      } catch (error: any) {
+      } catch (error: unknown) {
         await nuxt.callHook('build:error', error)
         throw error
       }

@@ -439,7 +439,7 @@ function createViteNodeSocketServer (nuxt: Nuxt, ssrServer: ViteDevServer, clien
             // @ts-expect-error this should never happen
             throw { status: 400, message: `Unknown request type: ${request.type}` } satisfies ErrorPartial
         }
-      } catch (error: any) {
+      } catch (error: unknown) {
         sendError(socket, request.id, error)
       }
     }

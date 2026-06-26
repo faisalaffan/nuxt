@@ -9,7 +9,7 @@ export async function bundleServer (nuxt: Nuxt) {
       : nuxt.options.server.builder
 
     await bundle(nuxt)
-  } catch (error: any) {
+  } catch (error: unknown) {
     await nuxt.callHook('build:error', error)
 
     throw error
