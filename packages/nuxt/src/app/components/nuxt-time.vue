@@ -118,7 +118,7 @@ if (import.meta.server) {
     const now = window._nuxtTimeNow ||= Date.now()
     const toCamelCase = (name: string, index: number) => {
       if (index > 0) {
-        return name[0]!.toUpperCase() + name.slice(1)
+        return (name[0]?.toUpperCase() ?? '') + name.slice(1)
       }
       return name
     }
